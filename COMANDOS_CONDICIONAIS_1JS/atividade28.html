@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE28</title>
+</head>
+<body>
+    <!-- Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente usando o loop "do-while".-->
+     <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let number = parseInt(prompt("Digite um número inteiro: ")); // Lê um número inteiro do usuário
+
+console.log("Os dígitos do número", number, "são:");
+
+do {
+  let digit = number % 10; // Obtém o último dígito do número
+  console.log(digit); // Exibe o dígito
+  number = Math.floor(number / 10); // Remove o último dígito do número
+} while (number > 0); // Condição do loop: enquanto o número for maior que 0
+ 
+
+     </script>
+</body>
+</html>

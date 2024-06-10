@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE30</title>
+</head>
+<body>
+    <!--Crie um programa que leia o nome e a idade de várias pessoas usando o loop "do-while" até que o nome "fim" seja informado. Ao final, exiba a média das idades-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let sum = 0; // Inicializa a variável de soma das idades
+let count = 0; // Inicializa o contador de pessoas
+
+console.log("Digite o nome e a idade das pessoas (digite 'fim' no nome para encerrar):");
+
+let name = ""; // Inicializa a variável de nome
+
+do {
+  name = prompt("Nome: "); // Lê o nome da pessoa
+  if (name.toLowerCase() !== 'fim') { // Verifica se o nome não é 'fim' (ignora maiúsculas/minúsculas)
+	let age = parseInt(prompt("Idade: ")); // Lê a idade da pessoa
+	sum += age; // Adiciona a idade à soma
+	count++; // Incrementa o contador de pessoas
+  }
+} while (name.toLowerCase() !== 'fim'); // Condição do loop: enquanto o nome não for 'fim' (ignora maiúsculas/minúsculas)
+
+if (count > 0) { // Verifica se pelo menos uma pessoa foi inserida
+  let averageAge = sum / count; // Calcula a média das idades
+  console.log("A média das idades é:", averageAge.toFixed(2)); // Exibe a média das idades com duas casas decimais
+} else {
+  console.log("Nenhuma idade foi inserida."); // Mensagem de erro se nenhum nome foi inserido
+}
+
+    </script>
+</body>
+</html>

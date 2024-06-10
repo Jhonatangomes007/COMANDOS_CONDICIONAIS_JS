@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE23</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "do-while".-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let number = parseInt(prompt("Digite um número inteiro: ")); // Lê um número inteiro do usuário
+let a = 0, b = 1; // Inicializa as variáveis para a sequência de Fibonacci
+
+console.log("Sequência de Fibonacci até", number + ":");
+
+if (number >= 0) {
+  console.log(a); // Exibe o primeiro número da sequência
+}
+if (number >= 1) {
+  console.log(b); // Exibe o segundo número da sequência
+}
+
+let next; // Declara a variável para armazenar o próximo número da sequência
+
+do {
+  next = a + b; // Calcula o próximo número da sequência
+  if (next <= number) {
+	console.log(next); // Exibe o próximo número da sequência se for menor ou igual ao número fornecido
+  }
+  a = b; // Atualiza a variável a
+  b = next; // Atualiza a variável b
+} while (next <= number); // Condição do loop: enquanto o próximo número for menor ou igual ao número fornecido
+
+    </script>
+</body>
+</html>

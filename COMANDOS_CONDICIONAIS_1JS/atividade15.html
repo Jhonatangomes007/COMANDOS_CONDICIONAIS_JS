@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIADE15</title>
+</head>
+<body>
+    <!-- Crie um programa que leia o nome e a idade de várias pessoas usando o loop "while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let sum = 0; // Inicializa a variável de soma das idades
+let count = 0; // Inicializa o contador de pessoas
+
+let name = prompt("Digite o nome da pessoa ou 'fim' para encerrar: "); // Lê o nome da primeira pessoa
+
+while (name.toLowerCase() !== 'fim') { // Enquanto o nome não for "fim" (ignora maiúsculas/minúsculas)
+  let age = parseInt(prompt("Digite a idade de " + name + ": ")); // Lê a idade da pessoa
+  sum += age; // Adiciona a idade à soma
+  count++; // Incrementa o contador de pessoas
+  name = prompt("Digite o nome da próxima pessoa ou 'fim' para encerrar: "); // Lê o nome da próxima pessoa
+}
+
+if (count > 0) { // Verifica se pelo menos uma pessoa foi inserida
+  let averageAge = sum / count; // Calcula a média das idades
+  console.log("A média das idades é:", averageAge.toFixed(2)); // Exibe a média das idades com duas casas decimais
+} else {
+  console.log("Nenhuma idade foi inserida."); // Mensagem de erro se nenhum nome foi inserido
+}
+
+    </script>
+</body>
+</html>

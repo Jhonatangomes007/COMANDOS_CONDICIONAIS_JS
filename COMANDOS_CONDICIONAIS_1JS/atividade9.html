@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE9</title>
+</head>
+<body>
+    <!-- Crie um programa que leia o nome e a idade de 5 pessoas usando o loop "while" e exiba a média das idades.-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let totalAge = 0; // Inicializa a variável totalAge com 0
+let count = 0; // Inicializa a variável count com 0
+
+while (count < 5) { // Condição do loop: enquanto count for menor que 5
+  let name = prompt("Digite o nome da pessoa: "); // Lê o nome da pessoa
+  let age = parseInt(prompt("Digite a idade da pessoa: ")); // Lê a idade da pessoa
+
+  // Verifica se a entrada de idade é válida
+  if (isNaN(age) || age < 0) {
+	console.log("Por favor, insira uma idade válida.");
+	continue; // Volta ao início do loop se a idade não for válida
+  }
+
+  totalAge += age; // Adiciona a idade à variável totalAge
+  count++; // Incrementa count em 1
+}
+
+let averageAge = totalAge / 5; // Calcula a média das idades
+
+console.log("A média das idades é:", averageAge); // Exibe a média das idades
+
+    </script>
+</body>
+</html>

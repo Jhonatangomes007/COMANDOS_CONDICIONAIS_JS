@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE40</title>
+</head>
+<body>
+    <!--Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci.-->
+
+    <script>
+
+let fibonacciSequence = [0, 1]; // Inicializa o array com os dois primeiros números da sequência
+
+for (let i = 2; i < 20; i++) {
+  let next = fibonacciSequence[i - 1] + fibonacciSequence[i - 2]; // Calcula o próximo número da sequência
+  fibonacciSequence.push(next); // Adiciona o próximo número ao array
+}
+
+console.log("Os primeiros 20 números da sequência de Fibonacci:");
+
+for (let i = 0; i < 20; i++) {
+  console.log(fibonacciSequence[i]);
+}
+
+    </script>
+</body>
+</html>

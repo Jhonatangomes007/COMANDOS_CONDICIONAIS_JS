@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE39</title>
+</head>
+<body>
+    <!--Crie um programa que leia o nome e a idade de 5 pessoas e exiba a média das idades.-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let sum = 0; // Inicializa a variável de soma das idades
+
+console.log("Digite o nome e a idade das pessoas:");
+
+for (let i = 1; i <= 5; i++) {
+  let name = prompt(`Nome da ${i}ª pessoa: `); // Lê o nome da pessoa
+  let age = parseInt(prompt(`Idade da ${i}ª pessoa: `)); // Lê a idade da pessoa
+  sum += age; // Adiciona a idade à soma
+}
+
+let average = sum / 5; // Calcula a média das idades
+
+console.log("A média das idades é:", average.toFixed(2)); // Exibe a média das idades com duas casas decimais
+
+    </script>
+</body>
+</html>

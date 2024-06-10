@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE10</title>
+</head>
+<body>
+    <!--Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci usando o loop "while".-->
+
+    <script>
+
+let a = 0, b = 1; // Inicializa as variáveis para a sequência de Fibonacci
+let count = 0; // Inicializa o contador
+
+console.log("Sequência de Fibonacci:");
+while (count < 20) { // Condição do loop: enquanto count for menor que 20
+  console.log(a); // Exibe o número atual da sequência
+  let next = a + b; // Calcula o próximo número da sequência
+  a = b; // Atualiza a variável a
+  b = next; // Atualiza a variável b
+  count++; // Incrementa count em 1
+}
+
+    </script>
+</body>
+</html>

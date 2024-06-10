@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIADE34</title>
+</head>
+<body>
+    <!--Faça um programa que leia 5 números inteiros e exiba a média aritmética dos valores lidos.-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let sum = 0;
+
+for (let i = 0; i < 5; i++) {
+  let number = parseInt(prompt(`Digite o ${i + 1}º número inteiro: `));
+  sum += number;
+}
+
+let average = sum / 5;
+
+console.log("A média aritmética dos valores lidos é:", average);
+ 
+
+    </script>
+</body>
+</html>

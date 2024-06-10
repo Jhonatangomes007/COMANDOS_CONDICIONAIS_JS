@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE8</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while"-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let number = parseInt(prompt("Digite um número inteiro positivo: ")); // Lê um número inteiro positivo do usuário
+
+if (number < 0) {
+  console.log("Por favor, digite um número inteiro positivo."); // Mensagem de erro para número negativo
+} else {
+  let a = 0, b = 1; // Inicializa as variáveis para a sequência de Fibonacci
+  console.log("Sequência de Fibonacci:");
+  console.log(a); // Exibe o primeiro número da sequência
+  if (number > 0) {
+	console.log(b); // Exibe o segundo número da sequência se number for maior que 0
+  }
+
+  while (true) {
+	let next = a + b; // Calcula o próximo número da sequência
+	if (next > number) break; // Interrompe o loop se o próximo número exceder o número lido
+	console.log(next); // Exibe o próximo número da sequência
+	a = b; // Atualiza a variável a
+	b = next; // Atualiza a variável b
+  }
+}
+ 
+    </script>
+</body>
+</html>

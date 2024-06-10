@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE19</title>
+</head>
+<body>
+    <!--Faça um programa que leia 5 números inteiros usando o loop "do-while" e exiba a média aritmética dos valores lidos.-->
+
+    <script>
+        
+        const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let sum = 0; // Inicializa a variável de soma
+let count = 0; // Inicializa o contador de números lidos
+
+do {
+  let number = parseInt(prompt("Digite um número inteiro: ")); // Lê um número inteiro do usuário
+  sum += number; // Adiciona o número à soma
+  count++; // Incrementa o contador de números lidos
+} while (count < 5); // Condição do loop: enquanto o contador for menor que 5
+
+let average = sum / 5; // Calcula a média aritmética
+
+console.log("A média aritmética dos valores lidos é:", average); // Exibe a média aritmética
+
+    </script>
+</body>
+</html>

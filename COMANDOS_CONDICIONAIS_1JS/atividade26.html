@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE26</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "do-while".-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let number = parseInt(prompt("Digite um número inteiro: ")); // Lê um número inteiro do usuário
+let sum = 0; // Inicializa a variável de soma
+
+let i = 2; // Inicializa a variável de iteração com o primeiro número par
+
+do {
+  sum += i; // Adiciona o número par atual à soma
+  i += 2; // Incrementa i em 2 para obter o próximo número par
+} while (i <= number); // Condição do loop: enquanto i for menor ou igual ao número lido
+
+console.log("A soma dos números pares de 1 a", number, "é:", sum); // Exibe a soma
+
+    </script>
+</body>
+</html>

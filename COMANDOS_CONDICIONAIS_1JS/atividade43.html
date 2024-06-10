@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE43</title>
+</head>
+<body>
+    <!-- Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente.-->
+
+    <script>
+
+const prompt = require('prompt-sync')(); // Requer o módulo prompt-sync para entrada do usuário
+
+let number = parseInt(prompt("Digite um número inteiro: ")); // Lê um número inteiro do usuário
+let digits = number.toString(); // Converte o número em uma string para facilitar a manipulação
+
+console.log("Os dígitos do número", number, "são:");
+
+for (let i = 0; i < digits.length; i++) {
+  console.log(digits[i]);
+}
+ 
+    </script>
+</body>
+</html>
